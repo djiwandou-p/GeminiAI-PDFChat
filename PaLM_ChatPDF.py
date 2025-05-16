@@ -6,8 +6,8 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.document_loaders import UnstructuredPDFLoader
 from langchain.chains import RetrievalQA
 
-from langchain.embeddings import GooglePalmEmbeddings
-from langchain.llms import GooglePalm
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI
 import os, glob
 
 
@@ -38,16 +38,15 @@ def main():
 
     # if "index" not in st.session:
     index = VectorstoreIndexCreator(
-        embedding=GooglePalmEmbeddings(),
+        embedding=GoogleGenerativeAIEmbeddings(model="models/embedding-001"),
         text_splitter=RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=0),
     ).from_loaders(loaders)
 
-    llm = GooglePalm(temperature=0.1)  # OpenAI()
+    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
     chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
         retriever=index.vectorstore.as_retriever(),
-        # input_key="question",
         return_source_documents=True,
     )
 
