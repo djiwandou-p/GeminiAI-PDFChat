@@ -3,6 +3,7 @@ This Repo implements chat with your PDF via a GUI. This Code utilized Gemini AI'
 
 
 ![image](https://github.com/user-attachments/assets/ccb29357-5cf9-4f3f-84cb-29bc0e4354aa)
+(tested on Windows 11, using wsl, run on 19-May-2025)
 
 
 ## Clone the Repo:
@@ -14,7 +15,12 @@ git clone https://github.com/djiwandou/GeminiAI-PDFChat.git
 ## Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
 tested in Windows 11 using WSL
-* using venv
+* init venv
+```shell
+python3 -m venv venv
+```
+
+* activate venv
 ```shell
 source venv/bin/activate
 ```
