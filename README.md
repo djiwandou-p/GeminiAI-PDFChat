@@ -8,7 +8,7 @@ This Repo implements chat with your PDF via a GUI. This Code utilized Gemini AI'
 ## Clone the Repo:
 Clone the repository. 
 ```shell
-git clone https://github.com/PromtEngineer/PaLM-PDFChat.git
+git clone https://github.com/djiwandou/GeminiAI-PDFChat.git
 ```
 
 ## Environment Setup
@@ -24,7 +24,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## OpenAI API Key 
+## GeminiAI API Key 
 
 You will need the PaLM API key to run this, get your Gemini AI API key from [here](https://aistudio.google.com/apikey) (Free!)
 In the `.env` set your API key. 
