@@ -1,8 +1,9 @@
 # Chat with PDF 
-This Repo implements chat with your PDF via a GUI. This Code utilized PaLM's LLM and Embedding models for information retreival from your documents. 
+This Repo implements chat with your PDF via a GUI. This Code utilized Gemini AI'ss LLM and Embedding models for information retreival from your documents. 
 
 
-![ChatApp UI](https://github.com/PromtEngineer/PDF_Chat-GUI/assets/134474669/bba57a81-909f-4fe3-91cd-96ae14c17438)
+![image](https://github.com/user-attachments/assets/ccb29357-5cf9-4f3f-84cb-29bc0e4354aa)
+
 
 ## Clone the Repo:
 Clone the repository. 
@@ -12,14 +13,20 @@ git clone https://github.com/PromtEngineer/PaLM-PDFChat.git
 
 ## Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
+tested in Windows 11 using WSL
+* using venv
+```shell
+source venv/bin/activate
+```
 
+* install requirements 
 ```shell
 pip install -r requirements.txt
 ```
 
 ## OpenAI API Key 
 
-You will need the PaLM API key to run this, get your PaLM key from [here](https://developers.generativeai.google/)
+You will need the PaLM API key to run this, get your Gemini AI API key from [here](https://aistudio.google.com/apikey) (Free!)
 In the `.env` set your API key. 
 
 ```shell
