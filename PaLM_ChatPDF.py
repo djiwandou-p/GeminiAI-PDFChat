@@ -46,7 +46,15 @@ with st.sidebar:
 def main():
     st.header("Chat with PDF 💬")
 
-    files_path = "./SOURCE_DOCUMENTS/AIHallucination.pdf"
+    uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
+    if uploaded_file is not None:
+        # Save the uploaded file to a temporary location
+        with open("temp_uploaded.pdf", "wb") as f:
+            f.write(uploaded_file.read())
+        files_path = "temp_uploaded.pdf"
+    else:
+        files_path = "./SOURCE_DOCUMENTS/AIHallucination.pdf"
+
     loaders = [PyPDFLoader(files_path)]
 
     # if "index" not in st.session:
