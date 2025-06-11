@@ -44,3 +44,7 @@ GOOGLE_API_KEY=
 ```shell
 streamlit run PaLM_ChatPDF.py
 ```
+
+## Detail code explanation
+<<[Diagram Flow>>
+See detail code explanation here [Detail-code-exp](Detail-code-exp.md)

@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import base64
 
 # Try to load dotenv, but provide a fallback
 try:
@@ -76,9 +77,20 @@ def main():
     # Accept user questions/query
     query = st.text_input("Ask questions about your PDF file:")
     # st.write(query)
+    # Show PDF Content expander
+    with st.expander("Show PDF Content"):
+        try:
+            with open(files_path, "rb") as f:
+                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000" type="application/pdf"></iframe>'
+            st.markdown(pdf_display, unsafe_allow_html=True)
+        except Exception as e:
+            st.write(f"Could not load PDF: {e}")
     if query:
         response = chain(query)
-        st.write(response["result"])
+        st.write(response["result"])        
+
+        # Existing expander for returned chunks
         with st.expander("Returned Chunks"):
             for doc in response["source_documents"]:
                 st.write(f"{doc.metadata['source']} \n {doc.page_content}")
