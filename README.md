@@ -46,5 +46,7 @@ streamlit run PaLM_ChatPDF.py
 ```
 
 ## Detail code explanation
-<<[Diagram Flow>>
+![chat_with_pdf](https://github.com/user-attachments/assets/f96377e9-a2ba-483b-9719-59b7f7d0749a)
+
+
 See detail code explanation here [Detail-code-exp](Detail-code-exp.md)
