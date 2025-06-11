@@ -1,6 +1,7 @@
 ## Code flow explanation: Chat with PDF
 
-<<Diagram>>
+![chat_with_pdf](https://github.com/user-attachments/assets/903ea6cc-3ae5-4921-b1bb-bf7d84a943be)
+
 
 ### Overview
 This Streamlit app allows users to upload a PDF and then ask questions about its content. 
